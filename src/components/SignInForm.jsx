@@ -14,13 +14,6 @@ const styles = StyleSheet.create({
     height: 48,
     marginVertical: 5,
   },
-  formInput: {
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: theme.colors.textSecondary,
-    paddingHorizontal: 16,
-    backgroundColor: theme.colors.white,
-  },
   formButton: {
     backgroundColor: theme.colors.primary,
     borderRadius: 5,
@@ -31,7 +24,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const SignInForm = ({ onSubmit }) => {
+const SignInForm = ({ onSubmit, isValid }) => {
   const stylesInput = [styles.formControl, styles.formInput];
   const stylesButton = [styles.formControl, styles.formButton];
   return (
@@ -47,7 +40,7 @@ const SignInForm = ({ onSubmit }) => {
         placeholder="Password"
         secureTextEntry
       />
-      <Pressable onPress={onSubmit} style={stylesButton}>
+      <Pressable onPress={onSubmit} style={stylesButton} disabled={!isValid}>
         <Subheading color="white">Sign in</Subheading>
       </Pressable>
     </View>
