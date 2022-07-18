@@ -1,10 +1,16 @@
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Link } from 'react-router-native';
 import Text from './Text';
 
+const styles = StyleSheet.create({
+  tab: {
+    paddingHorizontal: 4,
+  },
+});
+
 const AppBarTab = ({ to, text }) => {
   return (
-    <View>
+    <View style={styles.tab}>
       <Link to={to}>
         <Text color="white" fontSize="appBar">
           {text}
