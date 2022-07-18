@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
     height: 56,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
 });
 
@@ -18,7 +20,8 @@ const AppBar = () => {
   return (
     <View style={styles.appBar}>
       <View style={styles.container}>
-        <AppBarTab menuItem="Repositories" />
+        <AppBarTab text="Repositories" to="/" />
+        <AppBarTab text="Sign In" to="/signin" />
       </View>
     </View>
   );

@@ -10,7 +10,7 @@ const theme = {
   fontSizes: {
     body: 14,
     subheading: 16,
-    appBar: 24,
+    appBar: 18,
   },
   fonts: {
     main: 'System',
