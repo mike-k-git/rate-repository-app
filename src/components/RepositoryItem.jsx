@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
 
 const RepositoryItem = ({ item }) => {
   return (
-    <View style={styles.item}>
+    <View style={styles.item} testID="repositoryItem">
       <RepositoryItemHeader
         uri={item.ownerAvatarUrl}
-        name={item.id}
+        name={item.fullName}
         description={item.description}
         language={item.language}
       />
